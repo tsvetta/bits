@@ -1,0 +1,34 @@
+{
+  "name": "bits",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsvetta/bits.git"
+  },
+  "author": "Tatyana Tsvetkova <tsvetta@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsvetta/bits/issues"
+  },
+  "private": true,
+  "workspaces": [
+    "src/bits/*"
+  ],
+  "devDependencies": {
+    "eslint": "^4.18.1",
+    "eslint-plugin-react": "^7.7.0",
+    "webpack": "^3.11.0"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.10",
+    "style-loader": "^0.20.2"
+  }
+}
