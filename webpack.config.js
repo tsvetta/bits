@@ -8,7 +8,7 @@ const ENV_DEVELOPMENT = true;
 module.exports = {
   entry: './src/index.js',
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'docs'),
     host: '0.0.0.0',
     port: 9000,
     compress: true,
@@ -17,13 +17,13 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['docs']),
     ENV_DEVELOPMENT ? new webpack.NamedModulesPlugin() : null,
     ENV_DEVELOPMENT ? new webpack.HotModuleReplacementPlugin() : null,
   ],
