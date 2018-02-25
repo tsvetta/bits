@@ -12,6 +12,7 @@ module.exports = {
     sourceType: 'module',
   },
   'plugins': [
+    'eslint:recommended',
     'react',
   ],
   'rules': {
@@ -65,9 +66,9 @@ module.exports = {
     'react/jsx-uses-vars': 2,
     'react/jsx-filename-extension': [ 2, { 'extensions': [ '.js', '.jsx' ] } ],
     'react/jsx-wrap-multilines': [2, {
-        'declaration': true,
-        'assignment': true,
-        'return': true
+      'declaration': true,
+      'assignment': true,
+      'return': true
     }],
   },
 };
