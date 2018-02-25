@@ -27,5 +27,36 @@ module.exports = {
     }],
     'comma-style': [2, 'last'],
     'quote-props': [ 2, 'as-needed', { keywords: false, unnecessary: true, numbers: false } ],
+
+    /**
+     * React
+     */
+    'react/jsx-boolean-value': [ 2, 'never' ],
+    'react/jsx-closing-bracket-location': 0,
+    'react/jsx-curly-spacing': [ 2, 'never' ],
+    'react/jsx-equals-spacing': [ 2, 'never' ],
+    'react/jsx-handler-names': [ 2, {
+        'eventHandlerPrefix': 'handle',
+        'eventHandlerPropPrefix': 'on'
+    } ],
+    'react/jsx-indent': [ 2, 2 ],
+    'react/jsx-indent-props': [ 2, 2 ],
+    'react/jsx-key': 2,
+    'react/jsx-max-props-per-line': 0,
+    'react/jsx-no-bind': 0,
+    'react/jsx-no-duplicate-props': 2,
+    'react/jsx-no-literals': 0,
+    'react/jsx-no-undef': 2,
+    'react/jsx-pascal-case': 2,
+    'react/jsx-sort-prop-types': 0,
+    'react/jsx-sort-props': 0,
+    'react/jsx-space-before-closing': 2,
+    'react/jsx-uses-vars': 2,
+    'react/jsx-filename-extension': [ 2, { 'extensions': [ '.js', '.jsx' ] } ],
+    'react/jsx-wrap-multilines': [2, {
+        'declaration': true,
+        'assignment': true,
+        'return': true
+    }],
   },
 };

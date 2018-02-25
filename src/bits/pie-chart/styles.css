@@ -1,102 +1,102 @@
 :root {
-  --first-color: #98ce8f;
-  --second-color: #94d1ee;
-  --third-color: #f08985;
+  --first-color: #52b142;
+  --second-color: #5ce9ff;
+  --third-color: #ff6660;
   --forth-color: #ffdb10;
 }
 
-.pie-chart {
-  &__chart {
-      width: 100%;
-      margin: 0;
+.chart {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
 
-      text-align: center;
+.figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+}
+
+.legendTitle {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.legendContent {
+  margin: 0;
+}
+
+.legendRow {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+
+  &:last-child {
+      margin-bottom: 0;
+  }
+}
+
+.legendItemColor {
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  border-radius: 50%;
+
+  &.color-0 {
+    background-color: var(--first-color);
   }
 
-  &__figure {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      margin: 0;
+  &.color-1 {
+    background-color: var(--second-color);
   }
 
-  &__legend-title {
-      margin: 0 0 25px;
+  &.color-2 {
+    background-color: var(--third-color);
   }
 
-  &__legend-content {
-      margin: 0;
+  &.color-3 {
+    background-color: var(--forth-color);
+  }
+}
+
+.legendItemContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 240px;
+  margin: 0;
+}
+
+.legendNum {
+  margin-left: 10px;
+}
+
+.piece {
+  fill: none;
+  stroke-width: 22px;
+
+  &:nth-child(n+1) {
+    stroke: var(--first-color);
   }
 
-  &__legend-row {
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-
-      margin-bottom: 20px;
-
-      &:last-child {
-          margin-bottom: 0;
-      }
+  &:nth-child(n+2) {
+    stroke: var(--second-color);
   }
 
-  &__legend-item-color {
-      width: 12px;
-      height: 12px;
-      margin-right: 10px;
-
-      border-radius: 50%;
-
-      &_color_0 {
-          background-color: var(--first-color);
-      }
-
-      &_color_1 {
-          background-color: var(--second-color);
-      }
-
-      &_color_2 {
-          background-color: var(--third-color);
-      }
-
-      &_color_3 {
-          background-color: var(--forth-color);
-      }
-
+  &:nth-child(n+3) {
+    stroke: var(--third-color);
   }
 
-  &__legend-item-content {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      min-width: 240px;
-      margin: 0;
-  }
-
-  &__legend-num {
-      margin-left: 10px;
-  }
-
-  &__piece {
-      fill: none;
-      stroke-width: 22px;
-
-      &:nth-child(n+1) {
-          stroke: var(--first-color);
-      }
-
-      &:nth-child(n+2) {
-          stroke: var(--second-color);
-      }
-
-      &:nth-child(n+3) {
-          stroke: var(--third-color);
-      }
-
-      &:nth-child(n+4) {
-          stroke: var(--forth-color);
-      }
+  &:nth-child(n+4) {
+    stroke: var(--forth-color);
   }
 }

@@ -1,32 +1,72 @@
+const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+const ENV_DEVELOPMENT = true;
 
 module.exports = {
   entry: './src/index.js',
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    host: '0.0.0.0',
+    port: 9000,
+    compress: true,
+    // open: true,
+    hot: true,
+  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+    new CleanWebpackPlugin(['dist']),
+    ENV_DEVELOPMENT ? new webpack.NamedModulesPlugin() : null,
+    ENV_DEVELOPMENT ? new webpack.HotModuleReplacementPlugin() : null,
+  ],
   module: {
     rules: [
       {
+        test: /\.html$/,
+        loaders: [
+          'html-loader',
+        ],
+      },
+      {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-        },
+        loaders: [
+          'babel-loader',
+        ],
       },
       {
         test: /\.css$/,
         loaders: [
-          'style-loader',
+          {
+            loader: 'style-loader',
+            options: {
+              sourceMap: true,
+              convertToAbsoluteUrls: true,
+            },
+          },
           {
             loader: 'css-loader',
             options: {
               modules: true,
               importLoaders: 1,
-              localIdentName: '[name]__[local]___[hash:base64:5]',
+              localIdentName: '[local]_[hash:base64:5]',
             },
           },
+          'postcss-loader',
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        loaders: [
+          'file-loader',
         ],
       },
     ],

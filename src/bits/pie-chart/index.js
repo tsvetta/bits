@@ -1,42 +1,42 @@
-{/* <PieChart
-  hasLegend
-  legendTitle={i18n('legend_title')}
-  data={[
+/* Example:
+  <PieChart
+    hasLegend
+    legendTitle='Распределение расходов'
+    data={[
       {
-          text: i18n('active_offers'),
-          num: props.userOffersSummary.active,
+          text: 'Таня',
+          num: 20000,
       },
       {
-          text: i18n('moderating_offers'),
-          num: props.userOffersSummary.moderation,
+          text: 'Берта',
+          num: 4000,
       },
       {
-          text: i18n('banned_offers'),
-          num: props.userOffersSummary.banned,
+          text: 'Полина',
+          num: 500,
       },
-  ]}
-/> */}
+    ]}
+  />
+*/
 
-// @flow
 import * as React from 'react';
-// import bem from 'view/lib/bem';
-// const b = bem.with('pie-chart');
-import { zip, last } from 'ramda';
+import { zip, last } from 'lodash';
+import styles from './styles.css';
 
-import './styles.css';
+/* ::
+type PieChartData = {|
+  +text: string,
+  +num: number,
+|};
 
-// type PieChartData = {|
-//     text: string,
-//     num: number,
-// |};
+type Props = {|
+  +data: $ReadOnlyArray<PieChartData>,
+  +hasLegend?: boolean,
+  +legendTitle?: string,
+|};
+*/
 
-// type Props = {|
-//     +data: $ReadOnlyArray<PieChartData>,
-//     +hasLegend?: boolean,
-//     +legendTitle?: string,
-// |};
-
-class PieChart extends React.PureComponent/*<Props>*/ {
+class PieChart extends React.PureComponent/* :: <Props>*/ {
   render() {
     const { props } = this;
     const R = 60;
@@ -44,16 +44,16 @@ class PieChart extends React.PureComponent/*<Props>*/ {
     const piecesData = this.getPiePiecesData(props.data, circleLength);
 
     return (
-      <div className={b()}>
+      <div className={styles.wrapper}>
         {Boolean(props.legendTitle) &&
-            <p className={b('legend-title')}>
-              {props.legendTitle}
-            </p>
+          <p className={styles.legendTitle}>
+            {props.legendTitle}
+          </p>
         }
 
-        <figure className={b('figure')}>
+        <figure className={styles.figure}>
           {this.renderLegend()}
-          <figure className={b('chart')}>
+          <figure className={styles.chart}>
             <svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'>
               {piecesData.map(piece => (
                 <circle
@@ -61,7 +61,7 @@ class PieChart extends React.PureComponent/*<Props>*/ {
                   r={R}
                   cx='75'
                   cy='75'
-                  className={b('piece')}
+                  className={styles.piece}
                   strokeDashoffset={-1 * piece.offset}
                   strokeDasharray={`${piece.size} ${circleLength}`}
                 />
@@ -77,15 +77,15 @@ class PieChart extends React.PureComponent/*<Props>*/ {
     const { props } = this;
 
     return (
-      <figcaption className={b('legend')}>
-        <dl className={b('legend-content')}>
+      <figcaption className={styles.legend}>
+        <dl className={styles.legendContent}>
           {props.data.map((item, index) => {
             return (
-              <div key={item.text} className={b('legend-row')}>
-                <dt className={b('legend-item-color', { mods: { color: index } })} />
-                <dd className={b('legend-item-content')}>
+              <div key={item.text} className={styles.legendRow}>
+                <dt className={[styles.legendItemColor, styles[`color-${index}`]].join(' ')} />
+                <dd className={styles.legendItemContent}>
                   <span>{item.text}</span>
-                  <span className={b('legend-num')}>{item.num}</span>
+                  <span className={styles.legendNum}>{item.num}</span>
                 </dd>
               </div>
             );
