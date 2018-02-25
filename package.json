@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "npx webpack"
+    "build": "npx webpack",
+    "server": "node server/server.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
   },
   "dependencies": {
     "clean-webpack-plugin": "^0.1.18",
+    "express": "^4.16.2",
     "file-loader": "^1.1.9",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
