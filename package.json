@@ -32,7 +32,6 @@
     "webpack-dev-server": "^3.0.0"
   },
   "dependencies": {
-    "callbag-basics": "^2.0.1",
     "clean-webpack-plugin": "^0.1.18",
     "file-loader": "^1.1.9",
     "html-loader": "^0.5.5",
