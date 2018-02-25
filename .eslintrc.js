@@ -1,25 +1,24 @@
 module.exports = {
-  env: {
+  'env': {
     browser: true,
     es6: true,
     node: true,
   },
-  extends: 'eslint:recommended',
-  parserOptions: {
+  'parserOptions': {
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
       jsx: true,
     },
     sourceType: 'module',
   },
-  plugins: [
+  'plugins': [
     'react',
   ],
-  rules: {
-    indent: ['error', 2],
+  'rules': {
+    'indent': ['error', 2],
     'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single'],
-    semi: ['error', 'always'],
+    'quotes': ['error', 'single'],
+    'semi': ['error', 'always'],
     'comma-dangle': [2, 'always-multiline'],
     'comma-spacing': [2, {
       before: false,
@@ -27,6 +26,18 @@ module.exports = {
     }],
     'comma-style': [2, 'last'],
     'quote-props': [ 2, 'as-needed', { keywords: false, unnecessary: true, numbers: false } ],
+
+    /**
+     * Variables
+     */
+    'no-shadow': 2,
+    'no-shadow-restricted-names': 2,
+    'no-undef': 2,
+    'no-unused-vars': [ 2, {
+      'vars': 'local',
+      'args': 'after-used'
+    } ],
+    'no-use-before-define': 2,
 
     /**
      * React
