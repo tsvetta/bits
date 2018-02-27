@@ -1,4 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  height: 100vh;
+}
+
 body {
+  height: 100vh;
   margin: 0;
   font-family: 'Anonymous Pro', monospace;
+  background-color: #000;
+}
+
+:global(#app) {
+  min-height: 100vh;
 }

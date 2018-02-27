@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "npx webpack",
+    "build": "NODE_ENV=production webpack -p",
     "server": "node server/server.js"
   },
   "repository": {
@@ -34,6 +34,7 @@
     "webpack-dev-server": "^3.0.0"
   },
   "dependencies": {
+    "babel-preset-env": "^1.6.1",
     "clean-webpack-plugin": "^0.1.18",
     "express": "^4.16.2",
     "file-loader": "^1.1.9",

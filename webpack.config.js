@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const ENV_DEVELOPMENT = true;
+const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: './src/index.js',
@@ -23,10 +23,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    new CleanWebpackPlugin(['docs']),
-    ENV_DEVELOPMENT ? new webpack.NamedModulesPlugin() : null,
-    ENV_DEVELOPMENT ? new webpack.HotModuleReplacementPlugin() : null,
-  ],
+    IS_PRODUCTION ?  new CleanWebpackPlugin(['docs']) : null,
+    IS_PRODUCTION ? null : new webpack.NamedModulesPlugin(),
+    IS_PRODUCTION ? null : new webpack.HotModuleReplacementPlugin(),
+  ].filter(Boolean),
   module: {
     rules: [
       {

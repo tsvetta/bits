@@ -1,3 +1,7 @@
 .bit + .bit {
   margin-bottom: 20px;
 }
+
+.bit {
+  padding: 0 30px;
+}
