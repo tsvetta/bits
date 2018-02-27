@@ -5,10 +5,11 @@ Bits of code, sort of portfolio
 - [x] webpack
 - [x] HMR
 - [x] yarn workspaces
-- [x] react
 - [x] postcss
 - [x] css modules
 - [x] eslint
+- [x] react
+- [ ] react-router
 - [ ] redux
 - [ ] cycle.js
 - [ ] flow

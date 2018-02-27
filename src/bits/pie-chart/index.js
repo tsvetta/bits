@@ -1,26 +1,6 @@
-/* Example:
-  <PieChart
-    hasLegend
-    legendTitle='Распределение расходов'
-    data={[
-      {
-          text: 'Таня',
-          num: 20000,
-      },
-      {
-          text: 'Берта',
-          num: 4000,
-      },
-      {
-          text: 'Полина',
-          num: 500,
-      },
-    ]}
-  />
-*/
-
 import * as React from 'react';
 import { zip, last } from 'lodash';
+import { formatNumber } from '../../utils/formatters';
 import styles from './styles.css';
 
 /* ::
@@ -51,23 +31,26 @@ class PieChart extends React.PureComponent/* :: <Props>*/ {
           </p>
         }
 
-        <figure className={styles.figure}>
+        <figure className={styles.chartWrapper}>
           {this.renderLegend()}
-          <figure className={styles.chart}>
+          <div className={styles.chart}>
             <svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'>
-              {piecesData.map(piece => (
-                <circle
-                  key={piece.text}
-                  r={R}
-                  cx='75'
-                  cy='75'
-                  className={styles.piece}
-                  strokeDashoffset={-1 * piece.offset}
-                  strokeDasharray={`${piece.size} ${circleLength}`}
-                />
-              ))}
+              <title>График</title>
+              <g>
+                {piecesData.map(piece => (
+                  <circle
+                    key={piece.text}
+                    r={R}
+                    cx='75'
+                    cy='75'
+                    className={styles.piece}
+                    strokeDashoffset={-1 * piece.offset}
+                    strokeDasharray={`${piece.size} ${circleLength}`}
+                  />
+                ))}
+              </g>
             </svg>
-          </figure>
+          </div>
         </figure>
       </div>
     );
@@ -78,19 +61,14 @@ class PieChart extends React.PureComponent/* :: <Props>*/ {
 
     return (
       <figcaption className={styles.legend}>
-        <dl className={styles.legendContent}>
-          {props.data.map((item, index) => {
-            return (
-              <div key={item.text} className={styles.legendRow}>
-                <dt className={[styles.legendItemColor, styles[`color-${index}`]].join(' ')} />
-                <dd className={styles.legendItemContent}>
-                  <span>{item.text}</span>
-                  <span className={styles.legendNum}>{item.num}</span>
-                </dd>
-              </div>
-            );
-          })}
-        </dl>
+        <ul className={styles.legendContent}>
+          {props.data.map((item, index) => (
+            <li key={item.text} className={styles.legendRow}>
+              <span>{item.text}</span>
+              <span className={styles.legendNum}>{formatNumber(item.num)}</span>
+            </li>
+          ))}
+        </ul>
       </figcaption>
     );
   }

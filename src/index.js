@@ -4,6 +4,7 @@ import * as ReactDOM from 'react-dom';
 import Bits from './components/bits';
 import Bit from './components/bit';
 import PieChart from '@bits/pie-chart';
+import pieChartExampleData from '../server/pie-chart.json';
 
 import './common.css';
 
@@ -12,25 +13,8 @@ ReactDOM.render(
     <Bit>
       <PieChart
         hasLegend
-        legendTitle='Распределение расходов'
-        data={[
-          {
-            text: 'Таня',
-            num: 20000,
-          },
-          {
-            text: 'Берта',
-            num: 4000,
-          },
-          {
-            text: 'Полина',
-            num: 500,
-          },
-          {
-            text: 'Боря',
-            num: 30000,
-          },
-        ]}
+        legendTitle='Города России'
+        data={pieChartExampleData}
       />
     </Bit>
   </Bits>,

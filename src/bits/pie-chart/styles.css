@@ -5,79 +5,81 @@
   --forth-color: #ffdb10;
 }
 
+.chartWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
 .chart {
-  width: 100%;
+  width: 50%;
   margin: 0;
   display: flex;
   justify-content: center;
 }
 
-.figure {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0;
-}
-
 .legend {
+  width: 50%;
   display: flex;
   align-items: center;
 }
 
 .legendTitle {
-  margin: 0 0 30px;
+  margin: 0 0 20px;
   text-align: center;
   font-size: 1.3em;
 }
 
 .legendContent {
+  width: 100%;
   margin: 0;
+  padding: 0;
 }
 
 .legendRow {
+  position: relative;
   display: flex;
+  padding-left: 25px;
   align-items: center;
-  flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    top: 2px;
+    left: 0;
+  }
 
   &:last-child {
       margin-bottom: 0;
   }
-}
 
-.legendItemColor {
-  width: 12px;
-  height: 12px;
-  margin-right: 10px;
-  border-radius: 50%;
-
-  &.color-0 {
+  &:nth-child(n+1):before {
     background-color: var(--first-color);
   }
 
-  &.color-1 {
+  &:nth-child(n+2):before {
     background-color: var(--second-color);
   }
 
-  &.color-2 {
+  &:nth-child(n+3):before {
     background-color: var(--third-color);
   }
 
-  &.color-3 {
+  &:nth-child(n+4):before {
     background-color: var(--forth-color);
   }
 }
 
-.legendItemContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  min-width: 240px;
-  margin: 0;
-}
-
 .legendNum {
+  font-size: 13px;
   margin-left: 10px;
+  opacity: 0.5;
 }
 
 .piece {

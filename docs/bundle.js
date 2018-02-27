@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "90358c3d5238cd4f9293"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "39b25324353e2b0986e8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -735,22 +735,16 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".chart_RnLvP {\n  width: 100%;\n  margin: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n\n.figure_32NPE {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin: 0;\n}\n\n.legend_1MEvZ {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n\n.legendTitle_1Q5s0 {\n  margin: 0 0 30px;\n  text-align: center;\n  font-size: 1.3em;\n}\n\n.legendContent_DYD1f {\n  margin: 0;\n}\n\n.legendRow_2iSIU {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  margin-bottom: 20px\n}\n\n.legendRow_2iSIU:last-child {\n  margin-bottom: 0;\n}\n\n.legendItemColor_2GHrm {\n  width: 12px;\n  height: 12px;\n  margin-right: 10px;\n  border-radius: 50%\n}\n\n.legendItemColor_2GHrm.color-0_2qQJW {\n  background-color: #52b142;\n}\n\n.legendItemColor_2GHrm.color-1_3USaT {\n  background-color: #5ce9ff;\n}\n\n.legendItemColor_2GHrm.color-2_3wHBr {\n  background-color: #ff6660;\n}\n\n.legendItemColor_2GHrm.color-3_vLWAa {\n  background-color: #ffdb10;\n}\n\n.legendItemContent_2mO4o {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  min-width: 240px;\n  margin: 0;\n}\n\n.legendNum_C1yis {\n  margin-left: 10px;\n}\n\n.piece_1CHOc {\n  fill: none;\n  stroke-width: 22px\n}\n\n.piece_1CHOc:nth-child(n+1) {\n  stroke: #52b142;\n}\n\n.piece_1CHOc:nth-child(n+2) {\n  stroke: #5ce9ff;\n}\n\n.piece_1CHOc:nth-child(n+3) {\n  stroke: #ff6660;\n}\n\n.piece_1CHOc:nth-child(n+4) {\n  stroke: #ffdb10;\n}\n", ""]);
+exports.push([module.i, ".chartWrapper_3q5SJ {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin: 0;\n}\n\n.chart_RnLvP {\n  width: 50%;\n  margin: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n\n.legend_1MEvZ {\n  width: 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n\n.legendTitle_1Q5s0 {\n  margin: 0 0 20px;\n  text-align: center;\n  font-size: 1.3em;\n}\n\n.legendContent_DYD1f {\n  width: 100%;\n  margin: 0;\n  padding: 0;\n}\n\n.legendRow_2iSIU {\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 25px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin-bottom: 20px\n}\n\n.legendRow_2iSIU::before {\n  content: '';\n  position: absolute;\n  width: 12px;\n  height: 12px;\n  border-radius: 50%;\n  top: 2px;\n  left: 0;\n}\n\n.legendRow_2iSIU:last-child {\n  margin-bottom: 0;\n}\n\n.legendRow_2iSIU:nth-child(n+1):before {\n  background-color: #52b142;\n}\n\n.legendRow_2iSIU:nth-child(n+2):before {\n  background-color: #5ce9ff;\n}\n\n.legendRow_2iSIU:nth-child(n+3):before {\n  background-color: #ff6660;\n}\n\n.legendRow_2iSIU:nth-child(n+4):before {\n  background-color: #ffdb10;\n}\n\n.legendNum_C1yis {\n  font-size: 13px;\n  margin-left: 10px;\n  opacity: 0.5;\n}\n\n.piece_1CHOc {\n  fill: none;\n  stroke-width: 22px\n}\n\n.piece_1CHOc:nth-child(n+1) {\n  stroke: #52b142;\n}\n\n.piece_1CHOc:nth-child(n+2) {\n  stroke: #5ce9ff;\n}\n\n.piece_1CHOc:nth-child(n+3) {\n  stroke: #ff6660;\n}\n\n.piece_1CHOc:nth-child(n+4) {\n  stroke: #ffdb10;\n}\n", ""]);
 
 // exports
 exports.locals = {
+	"chartWrapper": "chartWrapper_3q5SJ",
 	"chart": "chart_RnLvP",
-	"figure": "figure_32NPE",
 	"legend": "legend_1MEvZ",
 	"legendTitle": "legendTitle_1Q5s0",
 	"legendContent": "legendContent_DYD1f",
 	"legendRow": "legendRow_2iSIU",
-	"legendItemColor": "legendItemColor_2GHrm",
-	"color-0": "color-0_2qQJW",
-	"color-1": "color-1_3USaT",
-	"color-2": "color-2_3wHBr",
-	"color-3": "color-3_vLWAa",
-	"legendItemContent": "legendItemContent_2mO4o",
 	"legendNum": "legendNum_C1yis",
 	"piece": "piece_1CHOc"
 };
@@ -765,7 +759,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "body {\n  font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;\n}\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  font-family: 'Anonymous Pro', monospace;\n}\n", ""]);
 
 // exports
 
@@ -780,7 +774,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".bit_2D9zV {\n\n}\n", ""]);
+exports.push([module.i, ".bit_2D9zV + .bit_2D9zV {\n  margin-bottom: 20px;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -797,7 +791,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".bits_nMQD2 {\n  margin: 0 auto;\n  max-width: 500px;\n}\n", ""]);
+exports.push([module.i, ".bits_nMQD2 {\n  margin: 0 auto;\n  padding: 30px 0;\n  max-width: 500px;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -36735,6 +36729,13 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./server/pie-chart.json":
+/***/ (function(module, exports) {
+
+module.exports = [{"text":"Москва","num":12380664},{"text":"Санкт-Петербург","num":5281579},{"text":"Новосибирск","num":1602915},{"text":"Екатеринбург","num":1455514}]
+
+/***/ }),
+
 /***/ "./src/bits/pie-chart/index.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -36743,28 +36744,9 @@ module.exports = function(module) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash__ = __webpack_require__("./node_modules/lodash/lodash.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_css__ = __webpack_require__("./src/bits/pie-chart/styles.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_css__);
-/* Example:
-  <PieChart
-    hasLegend
-    legendTitle='Распределение расходов'
-    data={[
-      {
-          text: 'Таня',
-          num: 20000,
-      },
-      {
-          text: 'Берта',
-          num: 4000,
-      },
-      {
-          text: 'Полина',
-          num: 500,
-      },
-    ]}
-  />
-*/
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_formatters__ = __webpack_require__("./src/utils/formatters.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_css__ = __webpack_require__("./src/bits/pie-chart/styles.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_css__);
 
 
 
@@ -36792,31 +36774,40 @@ class PieChart extends __WEBPACK_IMPORTED_MODULE_0_react__["PureComponent"] /* :
 
     return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
       'div',
-      { className: __WEBPACK_IMPORTED_MODULE_2__styles_css___default.a.wrapper },
+      { className: __WEBPACK_IMPORTED_MODULE_3__styles_css___default.a.wrapper },
       Boolean(props.legendTitle) && __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
         'p',
-        { className: __WEBPACK_IMPORTED_MODULE_2__styles_css___default.a.legendTitle },
+        { className: __WEBPACK_IMPORTED_MODULE_3__styles_css___default.a.legendTitle },
         props.legendTitle
       ),
       __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
         'figure',
-        { className: __WEBPACK_IMPORTED_MODULE_2__styles_css___default.a.figure },
+        { className: __WEBPACK_IMPORTED_MODULE_3__styles_css___default.a.chartWrapper },
         this.renderLegend(),
         __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
-          'figure',
-          { className: __WEBPACK_IMPORTED_MODULE_2__styles_css___default.a.chart },
+          'div',
+          { className: __WEBPACK_IMPORTED_MODULE_3__styles_css___default.a.chart },
           __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
             'svg',
             { xmlns: 'http://www.w3.org/2000/svg', width: '150', height: '150', viewBox: '0 0 150 150' },
-            piecesData.map(piece => __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]('circle', {
-              key: piece.text,
-              r: R,
-              cx: '75',
-              cy: '75',
-              className: __WEBPACK_IMPORTED_MODULE_2__styles_css___default.a.piece,
-              strokeDashoffset: -1 * piece.offset,
-              strokeDasharray: `${piece.size} ${circleLength}`
-            }))
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
+              'title',
+              null,
+              '\u0413\u0440\u0430\u0444\u0438\u043A'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
+              'g',
+              null,
+              piecesData.map(piece => __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]('circle', {
+                key: piece.text,
+                r: R,
+                cx: '75',
+                cy: '75',
+                className: __WEBPACK_IMPORTED_MODULE_3__styles_css___default.a.piece,
+                strokeDashoffset: -1 * piece.offset,
+                strokeDasharray: `${piece.size} ${circleLength}`
+              }))
+            )
           )
         )
       )
@@ -36828,31 +36819,24 @@ class PieChart extends __WEBPACK_IMPORTED_MODULE_0_react__["PureComponent"] /* :
 
     return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
       'figcaption',
-      { className: __WEBPACK_IMPORTED_MODULE_2__styles_css___default.a.legend },
+      { className: __WEBPACK_IMPORTED_MODULE_3__styles_css___default.a.legend },
       __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
-        'dl',
-        { className: __WEBPACK_IMPORTED_MODULE_2__styles_css___default.a.legendContent },
-        props.data.map((item, index) => {
-          return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
-            'div',
-            { key: item.text, className: __WEBPACK_IMPORTED_MODULE_2__styles_css___default.a.legendRow },
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]('dt', { className: [__WEBPACK_IMPORTED_MODULE_2__styles_css___default.a.legendItemColor, __WEBPACK_IMPORTED_MODULE_2__styles_css___default.a[`color-${index}`]].join(' ') }),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
-              'dd',
-              { className: __WEBPACK_IMPORTED_MODULE_2__styles_css___default.a.legendItemContent },
-              __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
-                'span',
-                null,
-                item.text
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
-                'span',
-                { className: __WEBPACK_IMPORTED_MODULE_2__styles_css___default.a.legendNum },
-                item.num
-              )
-            )
-          );
-        })
+        'ul',
+        { className: __WEBPACK_IMPORTED_MODULE_3__styles_css___default.a.legendContent },
+        props.data.map((item, index) => __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
+          'li',
+          { key: item.text, className: __WEBPACK_IMPORTED_MODULE_3__styles_css___default.a.legendRow },
+          __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
+            'span',
+            null,
+            item.text
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
+            'span',
+            { className: __WEBPACK_IMPORTED_MODULE_3__styles_css___default.a.legendNum },
+            Object(__WEBPACK_IMPORTED_MODULE_2__utils_formatters__["a" /* formatNumber */])(item.num)
+          )
+        ))
       )
     );
   }
@@ -37142,8 +37126,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_bits__ = __webpack_require__("./src/components/bits/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_bit__ = __webpack_require__("./src/components/bit/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__bits_pie_chart__ = __webpack_require__("./src/bits/pie-chart/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_css__ = __webpack_require__("./src/common.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__common_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__server_pie_chart_json__ = __webpack_require__("./server/pie-chart.json");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__server_pie_chart_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__server_pie_chart_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_css__ = __webpack_require__("./src/common.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__common_css__);
+
 
 
 
@@ -37161,23 +37148,24 @@ __WEBPACK_IMPORTED_MODULE_1_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_0_re
     null,
     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_4__bits_pie_chart__["a" /* default */], {
       hasLegend: true,
-      legendTitle: '\u0420\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u0438\u0435 \u0440\u0430\u0441\u0445\u043E\u0434\u043E\u0432',
-      data: [{
-        text: 'Таня',
-        num: 20000
-      }, {
-        text: 'Берта',
-        num: 4000
-      }, {
-        text: 'Полина',
-        num: 500
-      }, {
-        text: 'Боря',
-        num: 30000
-      }]
+      legendTitle: '\u0413\u043E\u0440\u043E\u0434\u0430 \u0420\u043E\u0441\u0441\u0438\u0438',
+      data: __WEBPACK_IMPORTED_MODULE_5__server_pie_chart_json___default.a
     })
   )
 ), document.getElementById('app'));
+
+/***/ }),
+
+/***/ "./src/utils/formatters.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = formatNumber;
+function formatNumber(num /*: number | string*/, delimiter = '\u00A0' /*: string*/) /*: string*/{
+  const breakNumberReg = /(\d)(?=(\d{3})+([^\d]|$))/g;
+
+  return String(num).replace(breakNumberReg, `$1${delimiter}`);
+}
 
 /***/ })
 
