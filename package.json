@@ -5,7 +5,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "NODE_ENV=production webpack -p",
-    "server": "node server/server.js"
+    "server": "node server/server.js",
+    "push": "npm run build && git add -A && git commit -m 'build' && git push"
   },
   "repository": {
     "type": "git",
