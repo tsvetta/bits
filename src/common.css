@@ -1,3 +1,17 @@
+:global(:root) {
+  --r: #f53f58;
+  --y: #FFE74C;
+  --o: #ff8138;
+  --g: #117416;
+  --b: #2176FF;
+  --p: #ff8db9;
+  --v: #b63de6;
+
+  --font-size-main: 16px;
+  --font-size-s: 13px;
+  --font-family-main: 'Anonymous Pro', monospace;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,7 +24,7 @@ html {
 body {
   height: 100vh;
   margin: 0;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: var(--font-family-main);
   background-color: #000;
 }
 
