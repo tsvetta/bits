@@ -4,9 +4,11 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "NODE_ENV=production webpack -p",
     "server": "node server/server.js",
-    "push": "npm run build && git add -A && git commit -m 'build' && git push"
+    "push": "npm run build && git add -A && git commit -m 'build' && git push",
+    "build": "NODE_ENV=production webpack -p",
+    "eslint": "eslint ./src",
+    "eslint-fix": "eslint --fix ./src"
   },
   "repository": {
     "type": "git",
