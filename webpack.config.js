@@ -14,6 +14,7 @@ module.exports = {
     compress: true,
     // open: true,
     hot: true,
+    historyApiFallback: true,
   },
   output: {
     filename: 'bundle.js',
@@ -23,9 +24,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    IS_PRODUCTION ?  new CleanWebpackPlugin(['docs']) : null,
-    IS_PRODUCTION ? null : new webpack.NamedModulesPlugin(),
-    IS_PRODUCTION ? null : new webpack.HotModuleReplacementPlugin(),
+    new CleanWebpackPlugin(['docs']),
+    !IS_PRODUCTION && new webpack.NamedModulesPlugin(),
+    !IS_PRODUCTION && new webpack.HotModuleReplacementPlugin(),
   ].filter(Boolean),
   module: {
     rules: [
@@ -66,6 +67,12 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         loaders: [
+          'file-loader',
+        ],
+      },
+      {
+        test: /\.(ttf|woff|woff(2))$/,
+        loader: [
           'file-loader',
         ],
       },
