@@ -7,6 +7,8 @@
   --p: #ff8db9;
   --v: #b63de6;
 
+  --content-width: 600px;
+
   --font-size-main: 16px;
   --font-size-s: 13px;
   --font-family-main: 'Anonymous Pro', monospace;
@@ -29,5 +31,22 @@ body {
 }
 
 :global(#app) {
+  --app-bg-margin: calc(var(--content-width) / 2 + 30px);
+
+  padding-top: 170px;
   min-height: 100vh;
+
+  background-image:
+    url('./images/bgs/Rick_and_Morty_logo.png'),
+    url('./images/bgs/rick-head.svg'),
+    url('./images/bgs/morty-head.svg');
+  background-position:
+    calc(50% + 20px) top,
+    calc(50% - var(--app-bg-margin)) 100px,
+    calc(50% + var(--app-bg-margin)) 100px;
+  background-size:
+    auto auto,
+    auto 200px,
+    auto 200px;
+  background-repeat: no-repeat;
 }

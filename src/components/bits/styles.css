@@ -1,6 +1,6 @@
 .bits {
   min-height: 100vh;
-  max-width: 600px;
+  max-width: var(--content-width);
   margin: 0 auto;
   padding: 30px 0;
   background-color: #fff;
